@@ -27,10 +27,10 @@ const BurgerConstructor = ({ data, setOrderDetailsModalOpen }) => {
       </div>
       <ul className={`${burgerConstructorStyle.list} pl-4 pr-4`}>
         {data.map(
-          (ingredient, idx) =>
-            idx > 0 &&
-            idx < data.length - 1 && (
-              <li key={idx} className={burgerConstructorStyle.list_item}>
+          (ingredient, index) =>
+            index > 0 &&
+            index < data.length - 1 && (
+              <li key={index} className={burgerConstructorStyle.list_item}>
                 <DragIcon />
                 <ConstructorElement
                   text={ingredient.name}
